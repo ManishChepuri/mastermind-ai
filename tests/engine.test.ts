@@ -187,3 +187,21 @@ test('mock board follows the receiving team workflow without changing story iden
  assert.equal(request.jiraKey,key);
  assert.equal(s.requests.length,1);
 });
+
+test('presentation story stays a gap until Jordan approves it, then Priya reuses one story',async()=>{
+ const {demoScenario}=await import('../lib/demo-scenario');
+ const state=seedWorkspace();
+ assert.match(state.projects[0].description,/Alex Chen/);
+ assert.match(state.projects[0].description,/restricted transaction data/);
+ applyAction(state,action({question:demoScenario.question}));
+ assert.equal(state.messages.at(-1)?.outcome,'gap');
+ assert.equal(state.requests[0].assigneeId,'jordan');
+ const requestId=state.requests[0].id;
+ applyAction(state,action({action:'reply',userId:'jordan',requestId,answer:demoScenario.securityAnswer}));
+ assert.equal(state.knowledge.length,0);
+ applyAction(state,action({action:'approve',userId:'jordan',requestId}));
+ applyAction(state,action({userId:'priya',question:demoScenario.question}));
+ assert.equal(state.messages.at(-1)?.outcome,'answer');
+ assert.deepEqual(state.messages.at(-1)?.citations,[`kb-${requestId}`]);
+ assert.equal(state.requests.length,1);
+});
