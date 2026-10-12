@@ -57,3 +57,7 @@ next-env.d.ts
 
 !.env.example
 *.tsbuildinfo
+
+/.impeccable/review/
+
+/.impeccable/questions/

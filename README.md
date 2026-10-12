@@ -2,9 +2,11 @@
 
 MasterMind helps employees on existing projects find answers across teams, request missing information, and reuse approved team responses. It also guides infrastructure requests through a reviewable form. It does not brainstorm goals, plan projects, or provision resources.
 
-This is a fictional hackathon demonstration using the approved design direction: a light sidebar, Sofia Sans typography, neutral ink buttons, and an original overlapping CPU-chip logo in Mastercard red and gold. It is not an official Mastercard product.
+This alternative interface uses a dark navigation rail, ivory canvas, Bricolage Grotesque headings, DM Sans body text, and an original red/gold CPU-chip logo. It is a fictional hackathon demonstration, not an official Mastercard product.
 
 Hosted demo: [MasterMind on Sites](https://infranav-team-workspace.hello566104.chatgpt.site).
+
+The alternative lives on `codex/impeccable-redesign`; the original version remains on `main`. Publishing this branch updates the existing hosted demo URL. See [DESIGN.md](DESIGN.md) for extracted visual tokens and [.impeccable/design.json](.impeccable/design.json) for component previews.
 
 ## What works today
 
@@ -62,3 +64,5 @@ npm run build
 Engine tests cover cited answers, gap routing, duplicate requests, idempotency, approval and audience checks, redaction, team selection, unknown ownership, personal workspaces, and infrastructure validation. Use the [demo walkthrough](docs/DEMO.md) for browser acceptance checks and the [Azure handoff](docs/AZURE_HANDOFF.md) for the integration work still required.
 
 Keep credentials server-side. `.env.example` lists planned configuration names; do not commit populated environment files or enter credentials into the demonstration UI. Deployment through Sites uses the declared D1 binding and production migration workflow; a local migration does not initialize a hosted database.
+
+The finalized redesign and mock Jira board are also published directly to `main` at the user’s request. The pre-redesign interface remains available at commit `7f76e97`.

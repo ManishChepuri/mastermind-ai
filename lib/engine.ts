@@ -125,10 +125,13 @@ export function applyAction(s:Workspace,input:Action,providedResolution?:Resolut
    let requestId:string|undefined;
    if(resolution.outcome==='gap'&&resolution.suggestedTeam){
     const existing=s.requests.find(r=>r.projectId===project.id&&r.toTeam===resolution.suggestedTeam&&r.kind==='question'&&r.status!=='answered'&&sameQuestion(r.title,question));
-    if(existing){requestId=existing.id;resolution.text='This question is already with '+teams.find(t=>t.id===existing.toTeam)?.name+'. I have linked the existing request so the team receives one request, not duplicates.';}
+    if(existing){requestId=existing.id;resolution.text='This question is already with '+teams.find(t=>t.id===existing.toTeam)?.name+'. I have linked the existing request and mock Jira story '+existing.jiraKey+'; no duplicate was created.';}
     else {
      requestId=`REQ-${String(s.requests.length+101).padStart(3,'0')}`;
-     s.requests.push({id:requestId,projectId:project.id,fromUser:person.id,fromTeam:person.team,toTeam:resolution.suggestedTeam,kind:'question',title:question,context:project.description+'\n\nEvidence reviewed: '+(resolution.citations.map(id=>documents.find(d=>d.id===id)?.title).join(', ')||'No adequate permitted evidence found.'),status:'open',createdAt:now(),approved:false,jiraKey:`DEMO-${s.requests.length+301}`,jiraStatus:'simulated',audience:[person.team,resolution.suggestedTeam],citations:resolution.citations});event(s,'request_created',person,project.id,requestId);
+     const assignee=people.find(p=>p.team===resolution.suggestedTeam);
+     const jiraKey=`DEMO-${s.requests.length+301}`;
+     resolution.text+=` A mock Jira story, ${jiraKey}, was created automatically on the ${teams.find(t=>t.id===resolution.suggestedTeam)?.name} board${assignee?` and assigned to ${assignee.name}`:''}.`;
+     s.requests.push({id:requestId,projectId:project.id,fromUser:person.id,fromTeam:person.team,toTeam:resolution.suggestedTeam,kind:'question',title:question,context:project.description+'\n\nEvidence reviewed: '+(resolution.citations.map(id=>documents.find(d=>d.id===id)?.title).join(', ')||'No adequate permitted evidence found.'),status:'open',createdAt:now(),approved:false,assigneeId:assignee?.id,jiraKey,jiraStatus:'simulated',audience:[person.team,resolution.suggestedTeam],citations:resolution.citations});event(s,'request_created',person,project.id,requestId);
     }
    }else if(resolution.outcome==='answer'){event(s,'answer_found',person,project.id);if(resolution.reused)event(s,'knowledge_reused',person,project.id);}
    s.messages.push({id:uid(),projectId:project.id,userId:person.id,role:'assistant',time:now(),...resolution,requestId});

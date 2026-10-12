@@ -4,6 +4,8 @@ MasterMind is the place employees return to when their existing project needs in
 
 This demo uses fictional people, project records, and policies. Source retrieval uses curated rules, Jira stories are simulated, and Azure services are not connected. Workflow changes are saved in the demo database.
 
+This branch (`codex/impeccable-redesign`) presents the same workflow through a dark rail, ivory workspace, and a larger knowledge-network canvas. The original interface is preserved on `main`. The existing demo URL shows this alternative after publication. Pending handoff routes and answered nodes reflect stored request state.
+
 ## Your first visit
 
 1. Keep **Alex Chen** selected in the sidebar's **Demo persona** selector. The **Fraud Scoring Service** is already connected and shared with Fraud Engineering, so you can start asking immediately.
@@ -63,3 +65,14 @@ Choose **Review request**, inspect every field, then **Submit to Platform**. Swi
 - **Reset demo** starts a fresh browser session with the original project. It retains previous database records rather than deleting them.
 
 Use the supported example questions for the presentation. General language understanding, real source ingestion, source ACL synchronization, and live Jira integration remain future work in the [Azure handoff](AZURE_HANDOFF.md).
+
+## Live mock Jira handoff
+
+1. Keep the workspace in one browser tab and open `/?view=jira` in another tab in the same browser. The board refreshes every 2.5 seconds.
+2. As Alex, ask: “What access does our VM need to read restricted transaction data?”
+3. Chat explains missing evidence and automatically creates DEMO-301 assigned to Jordan Lee on Security. Show the story appear in To do on the board.
+4. Switch the board's demo persona to Jordan Lee. Open the story, choose Mark in review, close it: the card moves to In progress.
+5. Open it again, supply an answer, optionally approve reuse, and send. Close the dialog: the card moves to Done and Alex receives the answer.
+6. Ask the same question as Priya after approval: the existing answer is reused without another story.
+
+The board is explicitly simulated and shares durable request state with MasterMind. No external Jira account is needed. Current release is pushed directly to main; codex/impeccable-redesign retains the redesign branch. Original design remains available at commit 7f76e97.

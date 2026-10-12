@@ -1,0 +1,446 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-12T17:34:18.896879+00:00",
+  "title": "Design System: MasterMind",
+  "extensions": {
+    "colorMeta": {
+      "bg-canvas": {
+        "displayName": "Bg Canvas",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.026 42.9)",
+          "oklch(25% 0.026 42.9)",
+          "oklch(35% 0.026 42.9)",
+          "oklch(45% 0.026 42.9)",
+          "oklch(60% 0.026 42.9)",
+          "oklch(75% 0.026 42.9)",
+          "oklch(85% 0.026 42.9)",
+          "oklch(95% 0.026 42.9)"
+        ]
+      },
+      "bg-surface": {
+        "displayName": "Bg Surface",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.033 48.0)",
+          "oklch(25% 0.033 48.0)",
+          "oklch(35% 0.033 48.0)",
+          "oklch(45% 0.033 48.0)",
+          "oklch(60% 0.033 48.0)",
+          "oklch(75% 0.033 48.0)",
+          "oklch(85% 0.033 48.0)",
+          "oklch(95% 0.033 48.0)"
+        ]
+      },
+      "bg-raised": {
+        "displayName": "Bg Raised",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.000 0.0)",
+          "oklch(25% 0.000 0.0)",
+          "oklch(35% 0.000 0.0)",
+          "oklch(45% 0.000 0.0)",
+          "oklch(60% 0.000 0.0)",
+          "oklch(75% 0.000 0.0)",
+          "oklch(85% 0.000 0.0)",
+          "oklch(95% 0.000 0.0)"
+        ]
+      },
+      "bg-hover": {
+        "displayName": "Bg Hover",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.022 43.6)",
+          "oklch(25% 0.022 43.6)",
+          "oklch(35% 0.022 43.6)",
+          "oklch(45% 0.022 43.6)",
+          "oklch(60% 0.022 43.6)",
+          "oklch(75% 0.022 43.6)",
+          "oklch(85% 0.022 43.6)",
+          "oklch(95% 0.022 43.6)"
+        ]
+      },
+      "bg-active": {
+        "displayName": "Bg Active",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.024 41.2)",
+          "oklch(25% 0.024 41.2)",
+          "oklch(35% 0.024 41.2)",
+          "oklch(45% 0.024 41.2)",
+          "oklch(60% 0.024 41.2)",
+          "oklch(75% 0.024 41.2)",
+          "oklch(85% 0.024 41.2)",
+          "oklch(95% 0.024 41.2)"
+        ]
+      },
+      "text-primary": {
+        "displayName": "Text Primary",
+        "role": "primary",
+        "tonalRamp": [
+          "oklch(15% 0.012 214.3)",
+          "oklch(25% 0.012 214.3)",
+          "oklch(35% 0.012 214.3)",
+          "oklch(45% 0.012 214.3)",
+          "oklch(60% 0.012 214.3)",
+          "oklch(75% 0.012 214.3)",
+          "oklch(85% 0.012 214.3)",
+          "oklch(95% 0.012 214.3)"
+        ]
+      },
+      "text-secondary": {
+        "displayName": "Text Secondary",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.001 150.0)",
+          "oklch(25% 0.001 150.0)",
+          "oklch(35% 0.001 150.0)",
+          "oklch(45% 0.001 150.0)",
+          "oklch(60% 0.001 150.0)",
+          "oklch(75% 0.001 150.0)",
+          "oklch(85% 0.001 150.0)",
+          "oklch(95% 0.001 150.0)"
+        ]
+      },
+      "text-tertiary": {
+        "displayName": "Text Tertiary",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.002 84.0)",
+          "oklch(25% 0.002 84.0)",
+          "oklch(35% 0.002 84.0)",
+          "oklch(45% 0.002 84.0)",
+          "oklch(60% 0.002 84.0)",
+          "oklch(75% 0.002 84.0)",
+          "oklch(85% 0.002 84.0)",
+          "oklch(95% 0.002 84.0)"
+        ]
+      },
+      "border": {
+        "displayName": "Border",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.013 54.0)",
+          "oklch(25% 0.013 54.0)",
+          "oklch(35% 0.013 54.0)",
+          "oklch(45% 0.013 54.0)",
+          "oklch(60% 0.013 54.0)",
+          "oklch(75% 0.013 54.0)",
+          "oklch(85% 0.013 54.0)",
+          "oklch(95% 0.013 54.0)"
+        ]
+      },
+      "border-strong": {
+        "displayName": "Border Strong",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.008 60.0)",
+          "oklch(25% 0.008 60.0)",
+          "oklch(35% 0.008 60.0)",
+          "oklch(45% 0.008 60.0)",
+          "oklch(60% 0.008 60.0)",
+          "oklch(75% 0.008 60.0)",
+          "oklch(85% 0.008 60.0)",
+          "oklch(95% 0.008 60.0)"
+        ]
+      },
+      "accent": {
+        "displayName": "Accent",
+        "role": "primary",
+        "tonalRamp": [
+          "oklch(15% 0.070 11.6)",
+          "oklch(25% 0.070 11.6)",
+          "oklch(35% 0.070 11.6)",
+          "oklch(45% 0.070 11.6)",
+          "oklch(60% 0.070 11.6)",
+          "oklch(75% 0.070 11.6)",
+          "oklch(85% 0.070 11.6)",
+          "oklch(95% 0.070 11.6)"
+        ]
+      },
+      "accent-soft": {
+        "displayName": "Accent Soft",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.066 23.5)",
+          "oklch(25% 0.066 23.5)",
+          "oklch(35% 0.066 23.5)",
+          "oklch(45% 0.066 23.5)",
+          "oklch(60% 0.066 23.5)",
+          "oklch(75% 0.066 23.5)",
+          "oklch(85% 0.066 23.5)",
+          "oklch(95% 0.066 23.5)"
+        ]
+      },
+      "success": {
+        "displayName": "Success",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.044 149.1)",
+          "oklch(25% 0.044 149.1)",
+          "oklch(35% 0.044 149.1)",
+          "oklch(45% 0.044 149.1)",
+          "oklch(60% 0.044 149.1)",
+          "oklch(75% 0.044 149.1)",
+          "oklch(85% 0.044 149.1)",
+          "oklch(95% 0.044 149.1)"
+        ]
+      },
+      "success-soft": {
+        "displayName": "Success Soft",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.027 133.3)",
+          "oklch(25% 0.027 133.3)",
+          "oklch(35% 0.027 133.3)",
+          "oklch(45% 0.027 133.3)",
+          "oklch(60% 0.027 133.3)",
+          "oklch(75% 0.027 133.3)",
+          "oklch(85% 0.027 133.3)",
+          "oklch(95% 0.027 133.3)"
+        ]
+      },
+      "warning": {
+        "displayName": "Warning",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.074 38.8)",
+          "oklch(25% 0.074 38.8)",
+          "oklch(35% 0.074 38.8)",
+          "oklch(45% 0.074 38.8)",
+          "oklch(60% 0.074 38.8)",
+          "oklch(75% 0.074 38.8)",
+          "oklch(85% 0.074 38.8)",
+          "oklch(95% 0.074 38.8)"
+        ]
+      },
+      "warning-soft": {
+        "displayName": "Warning Soft",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.067 40.7)",
+          "oklch(25% 0.067 40.7)",
+          "oklch(35% 0.067 40.7)",
+          "oklch(45% 0.067 40.7)",
+          "oklch(60% 0.067 40.7)",
+          "oklch(75% 0.067 40.7)",
+          "oklch(85% 0.067 40.7)",
+          "oklch(95% 0.067 40.7)"
+        ]
+      },
+      "danger": {
+        "displayName": "Danger",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.076 4.2)",
+          "oklch(25% 0.076 4.2)",
+          "oklch(35% 0.076 4.2)",
+          "oklch(45% 0.076 4.2)",
+          "oklch(60% 0.076 4.2)",
+          "oklch(75% 0.076 4.2)",
+          "oklch(85% 0.076 4.2)",
+          "oklch(95% 0.076 4.2)"
+        ]
+      },
+      "danger-soft": {
+        "displayName": "Danger Soft",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.100 15.0)",
+          "oklch(25% 0.100 15.0)",
+          "oklch(35% 0.100 15.0)",
+          "oklch(45% 0.100 15.0)",
+          "oklch(60% 0.100 15.0)",
+          "oklch(75% 0.100 15.0)",
+          "oklch(85% 0.100 15.0)",
+          "oklch(95% 0.100 15.0)"
+        ]
+      },
+      "brand-red": {
+        "displayName": "Brand Red",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.100 353.1)",
+          "oklch(25% 0.100 353.1)",
+          "oklch(35% 0.100 353.1)",
+          "oklch(45% 0.100 353.1)",
+          "oklch(60% 0.100 353.1)",
+          "oklch(75% 0.100 353.1)",
+          "oklch(85% 0.100 353.1)",
+          "oklch(95% 0.100 353.1)"
+        ]
+      },
+      "brand-gold": {
+        "displayName": "Brand Gold",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.093 35.7)",
+          "oklch(25% 0.093 35.7)",
+          "oklch(35% 0.093 35.7)",
+          "oklch(45% 0.093 35.7)",
+          "oklch(60% 0.093 35.7)",
+          "oklch(75% 0.093 35.7)",
+          "oklch(85% 0.093 35.7)",
+          "oklch(95% 0.093 35.7)"
+        ]
+      },
+      "brand-orange": {
+        "displayName": "Brand Orange",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.100 22.4)",
+          "oklch(25% 0.100 22.4)",
+          "oklch(35% 0.100 22.4)",
+          "oklch(45% 0.100 22.4)",
+          "oklch(60% 0.100 22.4)",
+          "oklch(75% 0.100 22.4)",
+          "oklch(85% 0.100 22.4)",
+          "oklch(95% 0.100 22.4)"
+        ]
+      },
+      "rail": {
+        "displayName": "Rail",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.012 214.3)",
+          "oklch(25% 0.012 214.3)",
+          "oklch(35% 0.012 214.3)",
+          "oklch(45% 0.012 214.3)",
+          "oklch(60% 0.012 214.3)",
+          "oklch(75% 0.012 214.3)",
+          "oklch(85% 0.012 214.3)",
+          "oklch(95% 0.012 214.3)"
+        ]
+      },
+      "rail-hover": {
+        "displayName": "Rail Hover",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.010 213.3)",
+          "oklch(25% 0.010 213.3)",
+          "oklch(35% 0.010 213.3)",
+          "oklch(45% 0.010 213.3)",
+          "oklch(60% 0.010 213.3)",
+          "oklch(75% 0.010 213.3)",
+          "oklch(85% 0.010 213.3)",
+          "oklch(95% 0.010 213.3)"
+        ]
+      },
+      "rail-text": {
+        "displayName": "Rail Text",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.006 202.5)",
+          "oklch(25% 0.006 202.5)",
+          "oklch(35% 0.006 202.5)",
+          "oklch(45% 0.006 202.5)",
+          "oklch(60% 0.006 202.5)",
+          "oklch(75% 0.006 202.5)",
+          "oklch(85% 0.006 202.5)",
+          "oklch(95% 0.006 202.5)"
+        ]
+      }
+    },
+    "shadows": [
+      {
+        "name": "small",
+        "value": "0 2px 5px rgba(25,28,32,.05)",
+        "purpose": "Light surface separation."
+      },
+      {
+        "name": "overlay",
+        "value": "0 20px 70px rgba(25,28,32,.18)",
+        "purpose": "Modals and transient feedback."
+      }
+    ],
+    "motion": [
+      {
+        "name": "drawer",
+        "value": "transform .2s ease, visibility .2s",
+        "purpose": "Mobile navigation; disabled for reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "stack",
+        "value": "1050px"
+      },
+      {
+        "name": "drawer",
+        "value": "760px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "description": "Primary button from the implemented interface.",
+      "html": "<button class=\"ds-button ds-primary\">Send answer</button>",
+      "css": ".ds-button{font-family:var(--body);font-size:13px;font-weight:600;padding:9px 15px;min-height:40px;border-radius:7px;cursor:pointer}.ds-button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}.ds-primary{background:var(--text-primary);color:var(--bg-raised);border:1px solid var(--text-primary)}.ds-primary:hover{background:#343a40;border-color:#343a40}",
+      "refersTo": "button-primary"
+    },
+    {
+      "name": "Secondary button",
+      "kind": "button",
+      "description": "Secondary button from the implemented interface.",
+      "html": "<button class=\"ds-button ds-secondary\">Review request</button>",
+      "css": ".ds-button{font-family:var(--body);font-size:13px;font-weight:600;padding:9px 15px;min-height:40px;border-radius:7px;cursor:pointer}.ds-button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}.ds-secondary{background:var(--bg-surface);color:var(--text-primary);border:1px solid var(--border-strong)}.ds-secondary:hover{background:var(--bg-hover)}",
+      "refersTo": "button-secondary"
+    },
+    {
+      "name": "Question field",
+      "kind": "input",
+      "description": "Question field from the implemented interface.",
+      "html": "<label class=\"ds-field\">Ask a project question<textarea placeholder=\"What do you need to know?\"></textarea></label>",
+      "css": ".ds-field{display:grid;gap:8px;font:13px var(--body);color:var(--text-primary)}.ds-field textarea{font:15px var(--body);padding:14px;background:var(--bg-surface);color:var(--text-primary);border:1px solid var(--border-strong);border-radius:8px;min-height:64px}.ds-field textarea:focus-visible{outline:2px solid var(--accent);outline-offset:3px}"
+    },
+    {
+      "name": "Navigation row",
+      "kind": "nav",
+      "description": "Navigation row from the implemented interface.",
+      "html": "<nav class=\"ds-nav\"><button>Team inbox</button></nav>",
+      "css": ".ds-nav{background:var(--rail);padding:14px}.ds-nav button{font:550 14px var(--body);color:var(--bg-raised);background:#373c42;border:0;border-radius:7px;padding:12px 16px;cursor:pointer}.ds-nav button:hover{background:var(--rail-hover)}.ds-nav button:focus-visible{outline:2px solid var(--brand-gold);outline-offset:3px}"
+    },
+    {
+      "name": "Status tag",
+      "kind": "chip",
+      "description": "Status tag from the implemented interface.",
+      "html": "<span class=\"ds-tag\">Awaiting response</span>",
+      "css": ".ds-tag{display:inline-flex;background:var(--bg-hover);color:var(--text-secondary);font:500 12px/1.4 var(--body);padding:4px 8px;border-radius:5px}"
+    },
+    {
+      "name": "Project card",
+      "kind": "card",
+      "description": "Project card from the implemented interface.",
+      "html": "<button class=\"ds-card\"><strong>Fraud Scoring Service</strong><span>Shared team workspace</span></button>",
+      "css": ".ds-card{display:grid;gap:10px;text-align:left;background:var(--bg-raised);color:var(--text-primary);border:1px solid var(--border);border-radius:12px;padding:24px;cursor:pointer}.ds-card strong{font:600 22px var(--display)}.ds-card span{font:14px var(--body);color:var(--text-secondary)}.ds-card:hover{border-color:var(--border-strong)}.ds-card:focus-visible{outline:2px solid var(--accent);outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Network editorial",
+    "overview": "Network editorial places an immediately usable question workspace beside a substantial knowledge-network canvas. Warm ivory supports reading; the dark rail and network establish orientation. Gold identifies actual pending handoffs rather than decorative activity.",
+    "keyCharacteristics": [
+      "Dark navigation rail and ivory work surface.",
+      "Bricolage Grotesque headings with DM Sans body text.",
+      "A knowledge network tied to selected teams and real request state."
+    ],
+    "rules": [
+      {
+        "name": "The Evidence Rule",
+        "body": "Gold routes and answered checks reflect the stored handoff state; color does not imply an unconnected service is live.",
+        "section": "colors"
+      }
+    ],
+    "dos": [
+      "Do preserve readable evidence, team ownership, and an obvious next action.",
+      "Do use gold handoff routes only when supported by current request state.",
+      "Do keep the original overlapping CPU-chip identity in brand red, gold, and orange."
+    ],
+    "donts": [
+      "Don't fabricate live activity, impact numbers, or source connections.",
+      "Don't turn ordinary forms and tables into decorative network diagrams.",
+      "Don't hide controls or rely on animation to communicate request status."
+    ]
+  }
+}

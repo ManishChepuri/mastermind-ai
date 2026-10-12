@@ -70,3 +70,15 @@ These public offer and deployment constraints were checked on October 12, 2026. 
 - Infrastructure requests remain reviewable and do not provision resources.
 
 Before exposing real enterprise data, replace demo session identity, establish tenant isolation and retention, and add integration-level authorization tests. Current regex redaction and unit-tested fictional permissions are useful demo behavior, not a production data-loss-prevention system.
+
+## What the student team should prepare now
+
+1. In https://ai.azure.com, open the hackathon project and deploy a chat model that your subscription actually permits. Name the deployment `mastermind-chat` (or record its existing exact name). Confirm one successful playground response. Do not upgrade billing to bypass a quota error; report the model, region and error instead.
+2. From the deployment's code/endpoint view, record the Azure OpenAI resource base endpoint, deployed model name/version, exact deployment name and region. Do not substitute the Foundry project URL ending in `/api/projects/...` for the model inference endpoint.
+3. Copy `.env.example` to a local ignored `.env.local` and fill `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_DEPLOYMENT`, and `AZURE_OPENAI_API_KEY` privately, if key authentication is enabled. Keep `MASTERMIND_RETRIEVAL_PROVIDER=demo` until the adapter is implemented. Hosted credentials must be added separately as server-side hosting secrets. Do not send keys through chat or commit them. If the hackathon requires Entra-only access, provide the non-secret tenant/resource identifiers so workload authentication can be implemented instead.
+4. For real retrieval, create Azure AI Search on Free tier if it is offered for your subscription. Record the service endpoint. The implementation will define and populate an ACL-aware index named `mastermind-knowledge`; do not create an arbitrary schema. A query key suffices for runtime queries; ingestion needs separate write authorization. The current planned variables are `AZURE_SEARCH_ENDPOINT`, `AZURE_SEARCH_INDEX`, and `AZURE_SEARCH_API_KEY`. Embedding deployment configuration will be added with vector retrieval.
+5. Prepare a handful of fictional or approved sample documents and each document's owning team/access groups. Teams/SharePoint/Confluence ingestion also requires separate organizational authorization; a Foundry key does not grant those permissions.
+
+Send only the endpoint, deployment name, model/version, region, authentication method, and whether the playground succeeded. Credentials alone do not activate this release: the live adapters still need implementation and verification. The mock Jira board requires no Jira credentials.
+
+Official references: [Foundry model endpoints](https://learn.microsoft.com/en-us/azure/ai-studio/ai-services/concepts/endpoints), [create AI Search](https://learn.microsoft.com/en-us/azure/search/search-create-service-portal), [Search API keys](https://learn.microsoft.com/azure/search/search-security-api-keys).

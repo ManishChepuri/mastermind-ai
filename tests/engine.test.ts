@@ -140,3 +140,50 @@ test('specific policy topics take priority over incidental environment context',
  assert.deepEqual(resolveQuestion(s,person,project,'What data classification should our test environment use?').citations,['classification']);
  assert.deepEqual(resolveQuestion(s,person,project,'Is the old email intake form still valid?').citations,['vm','old-intake']);
 });
+
+test('a missing-document question automatically appears as an assigned mock Jira story',()=>{
+ const s=applyAction(seedWorkspace(),action({question}));
+ const story=s.requests[0];
+ assert.equal(story.jiraStatus,'simulated');
+ assert.equal(story.jiraKey,'DEMO-301');
+ assert.equal(story.title,question);
+ assert.equal(story.projectId,'fraud-scoring');
+ assert.equal(story.toTeam,'security');
+ assert.equal(story.assigneeId,'jordan');
+ assert.equal(people.find(p=>p.id===story.assigneeId)?.team,story.toTeam);
+ assert.equal(story.status,'open');
+ assert.match(s.messages.at(-1)?.text??'',/mock Jira story, DEMO-301, was created automatically/);
+ assert.match(s.messages.at(-1)?.text??'',/assigned to Jordan Lee/);
+ assert.equal(visibleState(s,people.find(p=>p.id==='jordan')!).requests[0].jiraKey,story.jiraKey);
+ assert.equal(visibleState(s,people.find(p=>p.id==='sam')!).requests.length,0);
+});
+test('known answers create no mock Jira board item',()=>{
+ const s=applyAction(seedWorkspace(),action({question:'Why do we need test and production environments?'}));
+ assert.equal(s.messages.at(-1)?.outcome,'answer');
+ assert.equal(s.requests.filter(r=>r.jiraStatus==='simulated').length,0);
+ assert(!s.messages.at(-1)?.text.includes('created automatically'));
+});
+test('retries and repeated missing-document questions keep one story with the same key and assignee',()=>{
+ const s=seedWorkspace(),a=action({question});
+ applyAction(s,a);
+ const key=s.requests[0].jiraKey,assignee=s.requests[0].assigneeId;
+ applyAction(s,a);
+ applyAction(s,action({question:question.toUpperCase()}));
+ applyAction(s,action({action:'retry-jira',requestId:s.requests[0].id}));
+ assert.equal(s.requests.length,1);
+ assert.equal(s.requests[0].jiraKey,key);
+ assert.equal(s.requests[0].assigneeId,assignee);
+ assert.equal(s.events.filter(e=>e.type==='request_created').length,1);
+ assert.match(s.messages.at(-1)?.text??'',new RegExp('mock Jira story '+key));
+ assert.match(s.messages.at(-1)?.text??'',/no duplicate was created/);
+});
+test('mock board follows the receiving team workflow without changing story identity',()=>{
+ const s=applyAction(seedWorkspace(),action({question}));
+ const request=s.requests[0],key=request.jiraKey;
+ applyAction(s,action({action:'review',userId:'jordan',requestId:request.id}));
+ assert.equal(request.status,'in_review');
+ applyAction(s,action({action:'reply',userId:'jordan',requestId:request.id,answer:'Use the approved private connection.'}));
+ assert.equal(request.status,'answered');
+ assert.equal(request.jiraKey,key);
+ assert.equal(s.requests.length,1);
+});
