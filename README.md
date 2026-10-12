@@ -2,9 +2,9 @@
 
 MasterMind helps employees on existing projects find answers across teams, request missing information, and reuse approved team responses. It also guides infrastructure requests through a reviewable form. It does not brainstorm goals, plan projects, or provision resources.
 
-This is a fictional hackathon demonstration using the approved design direction: a light sidebar, Sofia Sans typography, neutral ink buttons, and an original overlapping-brains logo in Mastercard red and gold. It is not an official Mastercard product.
+This is a fictional hackathon demonstration using the approved design direction: a light sidebar, Sofia Sans typography, neutral ink buttons, and an original overlapping CPU-chip logo in Mastercard red and gold. It is not an official Mastercard product.
 
-Planned hosted demo: [MasterMind on Sites](https://infranav-team-workspace.hello566104.chatgpt.site). Deployment verification is pending.
+Hosted demo: [MasterMind on Sites](https://infranav-team-workspace.hello566104.chatgpt.site).
 
 ## What works today
 

@@ -99,6 +99,8 @@ body{background:var(--bg-canvas);color:var(--text-primary)}
 .sidebar{overflow-y:auto;overscroll-behavior:contain}.sidebar>nav,.sidebar>.brand,.sidebar>.org-switch,.sidebar>.sidebar-bottom{flex-shrink:0}.org-switch{margin:20px 0}.sidebar-separator{margin:20px 8px}.sidebar-bottom{padding-top:16px}.demo-note{padding:12px 8px}.demo-note p{margin:6px 0 8px;line-height:18px}.profile{padding:12px 16px 16px}.profile small{line-height:18px}.sidebar>.nav-label{flex-shrink:0}
 @media(max-width:900px) and (min-width:761px){.sidebar{overflow-x:hidden}.sidebar-bottom{display:none}}
 
-/* Two connected minds: original Mastercard-inspired product mark. */
+/* Two connected chips: original Mastercard-inspired product mark. */
 :root{--brand-red:#EB001B;--brand-gold:#F79E1B;--brand-orange:#FF5F00}
 .brand-mark{width:48px;height:32px;background:transparent;border-radius:0}.brand-mark.small{width:32px;height:22px;background:transparent;border-radius:0}.page-footer .brand-mark{width:30px;height:20px}.brand{gap:8px}.project-emblem{background:var(--bg-hover);color:var(--text-secondary)}
+
+@media(max-width:760px){.sidebar:not(.open){visibility:hidden}.sidebar.open{visibility:visible}}

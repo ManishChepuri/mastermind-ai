@@ -1,6 +1,6 @@
 # MasterMind design system
 
-The user selected the attached frontend redesign direction: a restrained enterprise workspace with an original overlapping-brains logo in Mastercard red and gold, light sidebar, warm neutral surfaces, and ink primary actions. The user subsequently selected two minimalist overlapping brains in Mastercard red and gold, with an orange overlap, retaining the calmer interface.
+The user selected the attached frontend redesign direction: a restrained enterprise workspace with an original overlapping CPU-chip logo in Mastercard red and gold, light sidebar, warm neutral surfaces, and ink primary actions. The user subsequently selected two minimalist overlapping CPU chips in Mastercard red and gold, with an orange overlap, retaining the calmer interface.
 
 Tokens live in app/globals.css. Sofia Sans, minimum 13px metadata, 15px body, 28px page titles. Color signals status or a focused action; people and team labels remain neutral. Use whitespace and dividers rather than a border around every section.
 
