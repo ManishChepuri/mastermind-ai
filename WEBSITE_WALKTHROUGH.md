@@ -4,8 +4,8 @@ MasterMind helps employees on an existing project find answers across teams. Sea
 
 ## Open the demo
 
-- Live workspace: https://infranav-team-workspace.hello566104.chatgpt.site/
-- Live mock Jira board: https://infranav-team-workspace.hello566104.chatgpt.site/?view=jira
+- Live workspace: https://mastermind.hello566104.chatgpt.site/
+- Live mock Jira board: https://mastermind.hello566104.chatgpt.site/?view=jira
 - Local workspace when the server is running: http://localhost:5173/
 
 Open workspace and board in two tabs or windows in the **same browser and on the same host**. They share a demo session and refresh every 2.5 seconds. Safari and Chrome have separate sessions. Use the menu button to open navigation on a narrow screen. The demo persona selector is at the bottom of navigation.

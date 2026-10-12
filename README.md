@@ -4,7 +4,7 @@ MasterMind helps employees on existing projects find answers across teams, reque
 
 This alternative interface uses a dark navigation rail, ivory canvas, Bricolage Grotesque headings, DM Sans body text, and an original red/gold CPU-chip logo. It is a fictional hackathon demonstration, not an official Mastercard product.
 
-Hosted demo: [MasterMind on Sites](https://infranav-team-workspace.hello566104.chatgpt.site).
+Hosted demo: [MasterMind on Sites](https://mastermind.hello566104.chatgpt.site).
 
 The alternative lives on `codex/impeccable-redesign`; the original version remains on `main`. Publishing this branch updates the existing hosted demo URL. See [DESIGN.md](DESIGN.md) for extracted visual tokens and [.impeccable/design.json](.impeccable/design.json) for component previews.
 
