@@ -1,9 +1,12 @@
+import { existsSync } from 'node:fs';
+import { loadEnvFile } from 'node:process';
 import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { readExecutionProfile } from "./execution-profile.mjs";
 
 const [command, ...args] = process.argv.slice(2);
 if (!["dev", "build"].includes(command)) throw new Error("Expected dev or build.");
+if(command==='dev'){const envFile=new URL('../.env.local',import.meta.url);if(existsSync(envFile))loadEnvFile(fileURLToPath(envFile));}
 const managedLinux = readExecutionProfile() === "managed-linux";
 
 if (managedLinux && command === "build") {

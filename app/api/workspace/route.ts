@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { people, teams, integrationCatalog } from '@/lib/data';
 import { repository } from '@/lib/repository';
 import { applyAction, canSeeProject, clean, eligibleKnowledge, parseAction, visibleState, type Resolution } from '@/lib/engine';
-import { getQuestionProvider, ProviderConfigurationError } from '@/lib/providers';
+import { getQuestionProvider, questionProviderStatus, ProviderConfigurationError } from '@/lib/providers';
 import type { Action } from '@/lib/types';
 export const dynamic='force-dynamic';
 const cookie='mastermind_demo';
@@ -12,7 +12,7 @@ export async function GET(req:NextRequest){
  const id=sessionId(req);
  try {let record=await repository.load(id);if(!record){await repository.create(id);record=await repository.load(id);}if(!record)throw new Error('Workspace could not be opened.');
  const person=people.find(p=>p.id===req.nextUrl.searchParams.get('user'))??people[0];
- return response({...visibleState(record.state,person),people:people.map(({groups,...p})=>p),teams,revision:record.revision,integrations:integrationCatalog},id);
+ return response({...visibleState(record.state,person),people:people.map(({groups,...p})=>p),teams,revision:record.revision,integrations:integrationCatalog,aiProvider:questionProviderStatus()},id);
  }catch{return response({error:'Workspace storage is unavailable. Please retry.'},id,503);}
 }
 export async function POST(req:NextRequest){

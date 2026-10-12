@@ -1,3 +1,7 @@
+# OpenAI backup branch
+
+This branch adds an optional direct OpenAI provider without Azure Foundry. See [setup and limitations](docs/OPENAI_BACKUP.md). The original release remains on `main`.
+
 # MasterMind
 
 MasterMind helps employees on existing projects find answers across teams, request missing information, and reuse approved team responses. It also guides infrastructure requests through a reviewable form. It does not brainstorm goals, plan projects, or provision resources.

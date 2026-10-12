@@ -13,7 +13,7 @@
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate",
     "typecheck": "tsc --noEmit --incremental false",
-    "test": "esbuild tests/engine.test.ts --bundle --platform=node --format=esm --outfile=.sites-runtime/engine.test.mjs && node --test .sites-runtime/engine.test.mjs"
+    "test": "esbuild tests/engine.test.ts tests/openai.test.ts --bundle --platform=node --format=esm --outdir=.sites-runtime/tests && node --test .sites-runtime/tests/*.test.js"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
